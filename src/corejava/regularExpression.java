@@ -26,7 +26,7 @@ public class regularExpression {
     }
     public boolean isValidPassword(String mobile)
     {
-        String pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+        String pattern="(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
         Pattern p=Pattern.compile(pattern);
         Matcher m=p.matcher(mobile);
         return m.matches();
