@@ -19,6 +19,7 @@ public class userRegistration {
         System.out.println("Enter Your Choice\n" +
                 "[1] Fisrt Name\n" +
                 "[2] Last Name\n" +
+                "[3] Email Validation"
                 "");
         choice=sc.nextInt();
         if(choice==1)
@@ -38,6 +39,13 @@ public class userRegistration {
                 name=sc.nextLine();
                 displayResult(re.isValidName(name));
                 break;
+            case 3:
+                sc.nextLine();
+                System.out.println("Enter Email");
+                name=sc.nextLine();
+                displayResult(re.isValidEmail(name));
+                break;
+                
             default:
                 exit(0);
         }
