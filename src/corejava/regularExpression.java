@@ -17,4 +17,18 @@ public class regularExpression {
         Matcher m=p.matcher(email);
         return m.matches();
     }
+    public boolean isValidMobile(String mobile)
+    {
+        String pattern="^[0-9]{2}\\s[0-9]{10}$";
+        Pattern p=Pattern.compile(pattern);
+        Matcher m=p.matcher(mobile);
+        return m.matches();
+    }
+    public boolean isValidPassword(String mobile)
+    {
+        String pattern="[a-zA-Z0-9]{8,}$";
+        Pattern p=Pattern.compile(pattern);
+        Matcher m=p.matcher(mobile);
+        return m.matches();
+    }
 }

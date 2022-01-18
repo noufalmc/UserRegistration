@@ -19,8 +19,9 @@ public class userRegistration {
         System.out.println("Enter Your Choice\n" +
                 "[1] Fisrt Name\n" +
                 "[2] Last Name\n" +
-                "[3] Email Validation"
-                "");
+                "[3] Email Validation\n"+
+                "[4] Enter Mobile Number\n" +
+                "[5] Enter Mobile Password");
         choice=sc.nextInt();
         if(choice==1)
         {
@@ -45,7 +46,16 @@ public class userRegistration {
                 name=sc.nextLine();
                 displayResult(re.isValidEmail(name));
                 break;
-                
+            case 4:
+                sc.nextLine();
+                System.out.println("Enter Mobile");
+                name= sc.nextLine();
+                displayResult(re.isValidMobile(name));
+            case 5:
+                sc.nextLine();
+                System.out.println("Enter Password");
+                name= sc.nextLine();
+                displayResult(re.isValidPassword(name));
             default:
                 exit(0);
         }
@@ -55,11 +65,11 @@ public class userRegistration {
     {
         if(val)
         {
-            System.out.println("Valid name");
+            System.out.println("Valid");
         }
         else
         {
-            System.out.println("Inavlid name");
+            System.out.println("Inavlid");
         }
     }
 }
