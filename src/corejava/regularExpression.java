@@ -12,7 +12,7 @@ public class regularExpression {
     }
     public boolean isValidEmail(String email)
     {
-        String pattern="^[a-zA-Z0-9+_.-]+[.][a-zA-Z0-9 +]+@[a-zA-Z0-9.-]+[.][a-zA-Z0-9{2,}]?+$";
+        String pattern="^[a-zA-Z0-9_+-]+([.][a-zA-Z0-9+]+)*@[a-zA-Z0-9+]+([.][a-zA-z]*)+[a-z]$";
         Pattern p=Pattern.compile(pattern);
         Matcher m=p.matcher(email);
         return m.matches();
